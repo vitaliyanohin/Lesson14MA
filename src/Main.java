@@ -9,12 +9,12 @@ public class Main {
 
   public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
-    ArrayList<String> lst = new ArrayList<>();
+    ArrayList<String> list = new ArrayList<>();
     while (in.hasNext()) {
-      lst.add(in.next());
+      list.add(in.next());
     }
     Map<String, Long> map = new HashMap<>();
-    ArrayList<String> finalLst = lst.stream()
+    ArrayList<String> finalLst = list.stream()
             .map(String::toLowerCase)
             .flatMap(x -> Arrays.stream(x.split("[\\\\p{Blank}\\\\p{Punct}]+")))
             .collect(Collectors.toCollection(ArrayList::new));
