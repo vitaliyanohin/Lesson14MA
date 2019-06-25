@@ -19,6 +19,7 @@ public class Main {
             .limit(10)
             .forEach(e -> System.out.println(e.getKey()));
   }
+
   private static int compare(Map.Entry<String, Long> e1, Map.Entry<String, Long> e2) {
     if (e1.getValue().equals(e2.getValue())) {
       return e1.getKey().compareTo(e2.getKey());
